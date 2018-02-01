@@ -1,0 +1,10 @@
+*.log
+node_modules
+.DS_Store
+webpack.stats.js
+.yarnclean
+**/.next
+out
+yarn.lock
+package-lock.json
+.env*
