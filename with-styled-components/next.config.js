@@ -10,12 +10,6 @@ dotenv.config();
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
-    '/confirm/': { page: '/confirm' },
-    '/signup/': { page: '/signup' },
-    '/terms/': { page: '/terms' },
-    '/welcome/': { page: '/welcome' },
-    '/profile/': { page: '/profile' },
-    '/dashboard/': { page: '/dashboard' },
   }),
   webpack: (config) => {
     const newConfig = config;
@@ -34,7 +28,6 @@ module.exports = {
     if (process.env.ENVIRONMENT === 'stage' || process.env.ENVIRONMENT === 'prod') {
       newConfig.plugins.push(new UglifyJsPlugin());
     }
-
 
     return newConfig;
   },
